@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Пример 30</title>
+</head>
+<body>
+<script>
+for (var i = 0;;){
+var x = prompt('Введите число x:','');
+x = parseFloat(x);
+if (isNaN(x)) alert('введено не число');
+else break;
+}
+
+for (var i = 0;;){
+var y = prompt('Введите число y:','');
+y = parseFloat(y);
+if (isNaN(y)) alert('введено не число');
+else break;
+}
+
+
+var z = Math.pow(x,y);
+
+//var z = +x; 
+//i=2;
+//while (i<=y){
+//z=z*x;
+//i++;
+//}
+
+if (z !== z) alert('возвести в степень нельзя');
+else if ((z == Infinity) || (z == -Infinity)) alert('число слишком большое или маленькое');
+else 
+alert('Число ' + x + ' в степени ' + y +' равно ' + z);
+
+
+</script>
+</body>
+</html>

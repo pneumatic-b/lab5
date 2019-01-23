@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Пример 30</title>
+<script>
+function mashroom() {
+  var x = document.forms["myForm"]["color"].value;
+    var y = document.forms["myForm"]["skirt"].checked;
+	alert (x);
+	alert(y);
+switch (true) {
+    case (x=='w' && y==false) : 
+		alert('Вы нашли белый гриб');
+		break;
+    case (x=='r' && y==true) : 
+		alert('А не мухомор ли это');
+		break;
+    case (x=='r' && y==false) : 
+		alert('может это подосиновик');
+		break;
+    default : 
+		alert('С грибами надо быть внимательными');
+		break;
+		}
+}		
+</script>
+</head>
+<body>
+
+
+<form name="myForm" onsubmit="return mashroom()" method="post">
+<label>Цвет гриба: </label>
+<select name="color">
+  <option value="w">белый</option>
+  <option value="y">желтый</option>
+  <option value="r">красный</option>
+  <option value="b">коричневый</option>
+</select>
+<label>Есть ли юбка? </label>
+<input type="checkbox" name="skirt"><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
